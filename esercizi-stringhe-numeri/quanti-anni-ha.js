@@ -11,3 +11,12 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const currentYear = 2020;
+const birthYear = 1991;
+
+const currentAge = currentYear - birthYear;
+const to100 = 100 - currentAge;
+
+console.log(`Input: anno corrente = ${currentYear}, anno di nascita = ${birthYear}
+Output: età = ${currentAge}, anni mancanti = ${to100}`);
