@@ -12,3 +12,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+let totSec = 12560;
+const secInMinute = 60;
+const secInHour = secInMinute*60;
+const h = Math.floor(totSec/secInHour);
+const m = Math.floor((totSec-h*secInHour)/secInMinute);
+const s = (totSec-h*secInHour)%secInMinute;
+
+console.log(`Input: 12560
+Output: ${h} ore, ${m} minuti e ${s} secondi`);
