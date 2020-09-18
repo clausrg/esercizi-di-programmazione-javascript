@@ -21,3 +21,33 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+const choice1 = 'Tiramisù';
+const choice2 = 'Torta della nonna';
+const choice3 = 'Cheesecake alla nutella';
+const choice4 = 'Macedonia';
+
+const choice = 1;
+
+switch (choice) {
+  case 1 :
+  console.log(`Input: scelta = ${choice}
+    Output: Hai scelto il dolce ${choice1}`);
+  break;
+  case 2 :
+  console.log(`Input: scelta = ${choice}
+    Output: Hai scelto il dolce ${choice2}`);
+  break;
+  case 3 :
+  console.log(`Input: scelta = ${choice}
+    Output: Hai scelto il dolce ${choice3}`);
+  break;
+  case 4 :
+  console.log(`Input: scelta = ${choice}
+    Output: Hai scelto il dolce ${choice4}`);
+  break;
+  default :
+  console.log(`Input: scelta = ${choice}
+    Output: Dolce non disponibile`);
+}
