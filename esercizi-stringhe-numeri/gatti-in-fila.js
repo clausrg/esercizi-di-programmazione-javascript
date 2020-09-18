@@ -17,3 +17,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+const cats = 44;
+const catsPerRows = 6;
+
+const numRows = Math.ceil(cats/catsPerRows);
+const missingCats = catsPerRows - cats%catsPerRows;
+
+console.log(`Input: numero di gatti = ${cats}, gatti per fila = ${catsPerRows}
+Output: numero di file = ${numRows}, gatti mancanti = ${missingCats}`);
