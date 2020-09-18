@@ -11,3 +11,14 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const num = -1;
+
+const numString = num.toString();
+const numChar = numString.length;
+
+const output = (num>=0) ? numChar : numChar-1;
+const charCifr = (num > 9)||(num<-9) ? 'e' : 'a';
+
+console.log(`Input: numero = ${num}
+	Output: ${output} cifr${charCifr}`);

@@ -11,6 +11,8 @@
   http://www.imparareaprogrammare.it
 */
 
+
+/* È sicuramente più semplice risolvere con gli array */
 const a = 132, b = -284, c = 34, d = 41;
 let max;
 let min;
