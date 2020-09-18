@@ -15,3 +15,19 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+const num = 73;
+
+if (num%2!==0)
+console.log(`Input: numero = ${num}
+  Output: 1`);
+else
+  console.log(`Input: numero = ${num}
+  Output: 0`);
+
+/* oppure */
+const output = (num%2!==0) ? 1 : 0;
+
+console.log(`Input: numero = ${num}
+  Output: ${output}`);
