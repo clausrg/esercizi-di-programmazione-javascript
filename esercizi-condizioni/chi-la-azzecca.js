@@ -38,11 +38,8 @@ let message;
 
 switch (winner) {
   case 1 :
-  message = 'ma il giocatore 1 si è avvicinato di più!';
-  break;
-
   case 2 :
-  message = 'ma il giocatore 2 si è avvicinato di più!';
+  message = `ma il giocatore ${winner} si è avvicinato di più!`;
   break;
   
   default :
