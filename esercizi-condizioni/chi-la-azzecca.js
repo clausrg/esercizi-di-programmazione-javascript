@@ -19,3 +19,56 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const player1 = 23;
+const player2 = 23;
+
+const min = 1;
+const max = 100;
+
+const roulette = Math.floor(Math.random() * (max-min)+min);
+
+const delta1 = Math.abs(roulette - player1);
+const delta2 = Math.abs(roulette - player2);
+
+const winner = (delta1 < delta2) ? 1 
+             : (delta2 < delta1) ? 2
+             : 0;
+let message;
+
+switch (winner) {
+  case 1 :
+  message = 'ma il giocatore 1 si è avvicinato di più!';
+  break;
+
+  case 2 :
+  message = 'ma il giocatore 2 si è avvicinato di più!';
+  break;
+  
+  default :
+  message = 'i giocatori sono ugualmente vicini al numro uscito!';
+}
+
+if ((player1<1)||(player1>100)||(player2<1)||(player2>100)) {
+  console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
+    Output: È uscito il numero ${roulette}
+    La giocata non è valida!`);
+} else {
+  if ((roulette != player1) && (roulette != player2)) {
+    console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
+      Output: È uscito il numero ${roulette}
+      Nessun giocatore ha vinto, ${message}`);
+  } else if ((player1 != player2) && (roulette === player1)) {
+    console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
+      Output: È uscito il numero ${roulette}
+      Il giocatore 1 ha vinto!`);
+  } else  if ((player1 != player2) && (roulette === player2)) {
+    console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
+      Output: È uscito il numero ${roulette}
+      Il giocatore 2 ha vinto!`);
+  } else {
+    console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
+      Output: È uscito il numero ${roulette}
+      Tutti i giocatori hanno vinto!`);
+  }
+}
