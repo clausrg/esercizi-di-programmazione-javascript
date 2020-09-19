@@ -49,7 +49,7 @@ switch (winner) {
   message = 'i giocatori sono ugualmente vicini al numro uscito!';
 }
 
-if ((player1<1)||(player1>100)||(player2<1)||(player2>100)) {
+if ((player1<min)||(player1>max)||(player2<min)||(player2>max)) {
   console.log(`Input: giocatore 1 = ${player1}, giocatore 2 = ${player2}
     Output: È uscito il numero ${roulette}
     La giocata non è valida!`);
