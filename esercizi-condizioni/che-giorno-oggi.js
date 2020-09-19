@@ -22,3 +22,46 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const numDay = 9;
+const day1 = 'Lunedì';
+const day2 = 'Martedì';
+const day3 = 'Mercoledì';
+const day4 = 'Giovedì';
+const day5 = 'Venerdì';
+const day6 = 'Sabato';
+const day7 = 'Domenica';
+
+switch (numDay) {
+  case 1 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day1}\"`);
+  break;
+  case 2 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day2}\"`);
+  break;
+  case 3 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day3}\"`);
+  break;
+  case 4 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day4}\"`);
+  break;
+  case 5 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day5}\"`);
+  break;
+  case 6 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day6}\"`);
+  break;
+  case 7 :
+  console.log(`Input: numero = ${numDay}
+    Output: \"${day7}\"`);
+  break;
+  default :
+  console.log(`Input: numero = ${numDay}
+    Output: \"Errore! Giorno della settimana non valido!\"`);
+}
