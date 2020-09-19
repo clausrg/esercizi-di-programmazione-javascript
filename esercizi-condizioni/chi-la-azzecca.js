@@ -20,7 +20,7 @@
   http://www.imparareaprogrammare.it
 */
 
-const player1 = 23;
+const player1 = 73;
 const player2 = 23;
 
 const min = 1;
