@@ -8,3 +8,15 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const numMin = 1;
+const numMax = 10;
+const input = Math.floor(Math.random() * (numMax - numMin +1) + numMin);
+
+let output = `Output: La tabellina del ${input}\n`;
+
+for (let i = 0; i <= 10; i++) {
+	output += `${input} x ${i} = ${input * i}\n`;
+}
+
+console.log(output);
