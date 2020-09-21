@@ -17,6 +17,8 @@ const a = 132, b = -284, c = 34, d = 41;
 let max;
 let min;
 
+/* Questo metodo è complesso ma ha il pregio di mettere in ordine tutti i valori.
+Ha senso solo se il numero delle variabili da ordinare è piccolo */
 if (b>=a) {
 	// b,a
 	if (c>=b) {
@@ -137,6 +139,41 @@ if (b>=a) {
 			min = d;
 		}
 	}
+}
+
+console.log(`Input: a = ${a}, b = ${b}, c = ${c}, d = ${d}
+	Output: maggiore = ${max}, minore = ${min}`);
+
+
+/* questo metodo è più semplice ma retituisce solo il valore max e quello min
+senza curarsi dell'ordine di tutti i valori */
+
+if (a>=b) {
+	var abMax = a;
+	var abMin = b;
+} else {
+	var abMax = b;
+	var abMin = a;
+}
+
+if (c>=d) {
+	var cdMax = c;
+	var cdMin = d;
+} else {
+	var cdMax = d;
+	var cdMin = c;
+}
+
+if (abMax>=cdMax) {
+	max = abMax;
+} else {
+	max = cdMax;
+}
+
+if (abMin<=cdMin) {
+	min = abMin;
+} else {
+	min = cdMin;
 }
 
 console.log(`Input: a = ${a}, b = ${b}, c = ${c}, d = ${d}
