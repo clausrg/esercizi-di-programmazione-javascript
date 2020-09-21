@@ -19,3 +19,15 @@
 
   http://www.imparareaprogrammare.it
 */
+let limit = 100;
+let output = 'Output: ';
+
+for (let i = 1; i<=limit; i++) {
+  if ((i % 10) == 0) {
+    output += `${i}\n`;
+  } else {
+    output += `${i} `;
+  }
+}
+
+console.log(output);
