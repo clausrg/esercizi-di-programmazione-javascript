@@ -14,3 +14,31 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+const n = 3;
+let i=0, dice=0, player1=0, player2=0, winner=0, points=0;
+
+for (i = 0; i < (n * 2); i++) {
+  dice = Math.floor(Math.random() * (6-1+1)+1);
+  if (i < n) {
+    player1 += dice;
+  } else {
+    player2 += dice;
+  }
+  console.log(dice);
+}
+
+if (player1 > player2) {
+  winner = 'player1';
+  points = player1;
+} else if (player1 < player2) {
+  winner = 'player2';
+  points = player2;
+} else {
+  winner = 'nessuno';
+  points = 'pari';
+}
+
+console.log(`Output: player1 = ${player1}, player2 = ${player2}
+  ${winner} ha vinto totalizzando ${points} punti`);
