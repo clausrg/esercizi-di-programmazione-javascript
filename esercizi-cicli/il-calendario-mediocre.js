@@ -45,3 +45,121 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const numMonth = Math.floor(Math.random() * 12);
+let numDay = Math.floor(Math.random() * 7);
+let month, mon, dayPerMonth, day;
+
+switch (numMonth) {
+    case 0:
+    month = 'Gennaio';
+    mon = 'GEN';
+    dayPerMonth = 31;
+    break;
+
+    case 1:
+    month = 'Febbraio';
+    mon = 'FEB';
+    dayPerMonth = 28;
+    break;
+
+    case 2:
+    month = 'Marzo';
+    mon = 'MAR';
+    dayPerMonth = 31;
+    break;
+
+    case 3:
+    month = 'Aprile';
+    mon = 'APR';
+    dayPerMonth = 30;
+    break;
+
+    case 4:
+    month = 'Maggio';
+    mon = 'MAG';
+    dayPerMonth = 31;
+    break;
+
+    case 5:
+    month = 'Giugno';
+    mon = 'GIU';
+    dayPerMonth = 30;
+    break;
+
+    case 6:
+    month = 'Luglio';
+    mon = 'LUG';
+    dayPerMonth = 31;
+    break;
+
+    case 7:
+    month = 'Agosto';
+    mon = 'AGO';
+    dayPerMonth = 31;
+    break;
+
+    case 8:
+    month = 'Settembre';
+    mon = 'SET';
+    dayPerMonth = 30;
+    break;
+
+    case 9:
+    month = 'Ottobre';
+    mon = 'OTT';
+    dayPerMonth = 31;
+    break;
+
+    case 10:
+    month = 'Novembre';
+    mon = 'NOV';
+    dayPerMonth = 30;
+    break;
+
+    case 11:
+    month = 'Dicembre';
+    mon = 'DIC';
+    dayPerMonth = 31;
+}
+
+console.log(`Calendario di ${month}:`);
+
+for (let i=1; i<=dayPerMonth; i++) {
+    switch (numDay) {
+        case 0:
+        day = 'Lun';
+        break;
+
+        case 1:
+        day = 'Mar';
+        break;
+
+        case 2:
+        day = 'Mer';
+        break;
+
+        case 3:
+        day = 'Gio';
+        break;
+
+        case 4:
+        day = 'Ven';
+        break;
+
+        case 5:
+        day = 'Sab';
+        break;
+
+        case 6:
+        day = 'Dom';
+    }
+
+    console.log(`${day}, ${i} ${mon}`);
+    
+    if (numDay<6) {
+        numDay++;
+    } else {
+        numDay = 0;
+    }
+}
