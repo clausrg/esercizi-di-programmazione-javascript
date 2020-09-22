@@ -16,11 +16,11 @@
 */
 
 
-const n = 5;
-let i, dice, player1=0, player2=0, winner, points;
+const n = 3;
+let dice, player1=0, player2=0, winner, points;
 const min=1, max=6;
 
-for (i = 0; i < (n * 2); i++) {
+for (let i = 0; i < (n * 2); i++) {
   dice = Math.floor(Math.random() * (max-min+1)+min);
   if (i < n) {
     player1 += dice;
