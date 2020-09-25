@@ -12,7 +12,6 @@
 */
 
 
-/* È sicuramente più semplice risolvere con gli array */
 const a = 132, b = -284, c = 34, d = 41;
 let max;
 let min;
@@ -175,6 +174,16 @@ if (abMin<=cdMin) {
 } else {
 	min = cdMin;
 }
+
+console.log(`Input: a = ${a}, b = ${b}, c = ${c}, d = ${d}
+	Output: maggiore = ${max}, minore = ${min}`);
+
+
+/* È sicuramente più semplice risolvere con gli array */
+const numArray = [a,b,c,d];
+numArray.sort((a,b)=>a-b);
+max = numArray[numArray.length-1];
+min = numArray[0];
 
 console.log(`Input: a = ${a}, b = ${b}, c = ${c}, d = ${d}
 	Output: maggiore = ${max}, minore = ${min}`);
