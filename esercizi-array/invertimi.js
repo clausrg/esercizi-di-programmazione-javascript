@@ -15,3 +15,24 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const N = 5;
+const numbers = [];
+
+for (let i=0; i<N; i++) {
+  numbers[i] = Math.floor(Math.random() * (10+1));
+}
+
+/* questo metodo inverte l'array numbers */
+console.log(`array ottenuto = ${numbers}
+  array invertito = ${numbers.reverse()}`);
+
+/* questo metodo aggiunge gli elementi in ordine inverso in coda all'array
+e stampa separatamente le due metà */
+
+for (let i=N-1; i>=0; i--) {
+  let count = numbers.push(numbers[i]);
+}
+
+console.log(`array ottenuto = ${numbers.filter((item,index) => index<N)}
+  array invertito = ${numbers.filter((item,index) => index>=N)}`);
