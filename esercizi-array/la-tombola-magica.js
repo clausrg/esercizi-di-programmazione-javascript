@@ -19,3 +19,52 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const chooNum = [3, 23, 73, 11, 90, 7, 88, 69, 17, 34];
+const randNum = [];
+let randNumber, double, equality;
+let result =  0;
+
+i = 0;
+do {
+  randNumber = Math.floor(Math.random() *90 +1);
+  double = randNum.some(num => randNumber === num);
+  equality = chooNum.some(num => randNumber === num);
+
+  if (!double) {
+    if (equality) {
+      result++;
+    }
+    randNum[i] = randNumber;
+    i++;
+  }
+} while(i<10)
+
+switch(result) {
+  case 2:
+  console.log(`Hai fatto ambo!`);
+  break;
+  case 3:
+  console.log(`Hai fatto terna!`);
+  break;
+  case 4:
+  console.log(`Hai fatto quaterna!`);
+  break;
+  case 5:
+  case 6:
+  case 7:
+  case 8:
+  case 9:
+  console.log(`Hai fatto cinquina!`);
+  break;
+  case 10:
+  console.log(`Hai fatto tombola!!!`);
+  break;
+
+  default:
+  console.log(`Mi dispiace, hai perso!`);
+}
+
+console.log(`${chooNum.sort((a,b) => a-b)}
+  ${randNum.sort((a,b) => a-b)}`);
+
