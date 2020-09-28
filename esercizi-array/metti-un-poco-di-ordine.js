@@ -15,3 +15,14 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const a = [];
+
+for (let i=0; i<10; i++) {
+  a[i] = Math.floor(Math.random() * 21-10);
+}
+
+console.log(a);
+
+console.log(`Ordine crescente = ${a.sort((a,b) => a-b)}`);
+console.log(`Ordine decrescente = ${a.reverse()}`);
