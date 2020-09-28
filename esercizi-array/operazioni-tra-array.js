@@ -19,3 +19,21 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const a = [];
+const b = [];
+const op = ['addizione','sottrazione','moltiplicazione','divisione'];
+const randOp = op[Math.floor(Math.random() * 4)];
+const result = [];
+
+for (let i=0; i<10; i++) {
+  a[i] = Math.floor(Math.random() * 10 + 1);
+  b[i] = Math.floor(Math.random() * 10 + 1);
+  result[i] = (randOp === 'addizione') ? a[i]+b[i]
+  : (randOp === 'sottrazione') ? a[i]-b[i]
+  : (randOp === 'moltiplicazione') ? a[i]*b[i]
+  : +(a[i]/b[i]).toFixed(2); // Il metodo toFixed converte il numero in stringa, per avere solo i decimali necessari il + riconverte la stringa in numero.
+}
+
+console.log(`Input: a = ${a}, b = ${b}, operazione = \"${randOp}\"
+  Output: c = ${result}`);
