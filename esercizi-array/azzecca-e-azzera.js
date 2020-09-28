@@ -12,3 +12,25 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const a = [];
+const numTot = 100;
+const numMax = 50;
+
+for (let i = 0; i < numTot; i++) {
+  a[i] = Math.floor(Math.random() * numMax + 1);
+}
+
+console.log(`Array iniziale = ${a}`);
+
+do {
+const aNumber = Number(window.prompt(`Type a number between 1 and ${numMax}`, ''));
+
+a.forEach(function(val,ind,arr){
+  arr[ind] = (val%aNumber === 0) ? 0 : val;
+})
+
+console.log(`${a.filter(num => num !== 0)} - ${a.every(num => num === 0)}`);
+} while (!(a.every(num => num === 0)))
+
+console.log(`Array finale = ${a}`);
