@@ -22,7 +22,24 @@ for (let i=0; i<10; i++) {
   a[i] = Math.floor(Math.random() * 21-10);
 }
 
-console.log(a);
+console.log(`Ordine crescente (sort) = ${a.sort((a,b) => a-b)}`);
+console.log(`Ordine decrescente (sort) = ${a.reverse()}`);
 
-console.log(`Ordine crescente = ${a.sort((a,b) => a-b)}`);
-console.log(`Ordine decrescente = ${a.reverse()}`);
+
+/* Soluzione senza usare il metodo sort() */
+
+const b = [];
+
+for (let i=0; i<10; i++) {
+  b[i] = Math.floor(Math.random() * 21-10);
+
+  b.forEach(function(num,ind,arr){
+    if ((i>0)&&(ind<i)&&(num>arr[i])) { // ordine crescente per invertire usare num<arr[i]
+      arr[ind] = arr[i];
+      arr[i] = num;
+    }
+  });
+}
+
+console.log(`Ordine crescente = ${b}`);
+console.log(`Ordine decrescente = ${b.reverse()}`);
