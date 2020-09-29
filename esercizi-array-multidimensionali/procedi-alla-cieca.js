@@ -7,3 +7,25 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const a = [];
+
+for (let x=0; x<10; x++) {
+	a[x] = [];
+	for (let y=0; y<10; y++) {
+		a[x][y] = Math.floor(Math.random() * 101);
+	}
+}
+
+console.table(a);
+
+/* Variante con i numeri ordinati da 0 a 99 */
+
+for (let x=0; x<10; x++) {
+	a[x] = [];
+	for (let y=0; y<10; y++) {
+		a[x][y] = x*10+y;
+	}
+}
+
+console.table(a);
