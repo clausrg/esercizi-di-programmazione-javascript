@@ -17,3 +17,26 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const N = 2;
+const M = 3;
+
+const a = [];
+
+for (let x=0; x<N; x++) {
+  a[x] = [];
+
+  for (let y=0; y<M; y++) {
+    a[x][y] = Math.floor(Math.random() * 100+1);
+  }
+}
+
+const b = a.flat();
+
+console.log(`Input: N = ${N}, M = ${M}
+      Output:
+        matrice =
+        [
+          [${a.join('],\n[')}]
+        ]
+        somma = ${b.reduce((acc,num) => acc + num)}`);
