@@ -16,3 +16,18 @@
     
   http://www.imparareaprogrammare.it
 */
+
+function equality(a, b) {
+  console.log(`Input: n = ${a}, m = ${b}
+    Output: ${(a === b) ? 'TRUE' : 'FALSE'}`);
+}
+
+// let equality = (a, b) => {
+//   console.log(`Input: n = ${a}, m = ${b}
+//     Output: ${(a === b) ? 'TRUE' : 'FALSE'}`);
+// }
+
+equality(2,3);
+equality(2,'2');
+equality(2,2);
+
