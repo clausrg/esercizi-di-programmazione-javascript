@@ -21,3 +21,35 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const N = 2;
+const M = 3;
+
+const a = [];
+const R = [];
+let C = [];
+
+for (let x = 0; x < N; x++) {
+  a[x] = [];
+  for (let y = 0; y < M; y++) {
+    a[x][y] = Math.floor(Math.random() * 100+1);
+    C[y] = 0;
+  }
+  R[x] = a[x].reduce((acc,num) => acc + num);
+}
+
+for (let i = 0; i < N; i++) {
+  a[i].forEach(function(num,ind){
+    C[ind] += num;
+  });
+}
+
+console.log(`Input: N = ${N}, M = ${M}
+      Output:
+        matrice =
+        [
+          [${a.join('],\n[')}]
+        ]
+
+        array R = [${R}]
+        array C = [${C}]`);
