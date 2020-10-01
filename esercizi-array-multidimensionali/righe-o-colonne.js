@@ -27,21 +27,15 @@ const M = 3;
 
 const a = [];
 const R = [];
-let C = [];
+const C = [];
 
 for (let x = 0; x < N; x++) {
   a[x] = [];
   for (let y = 0; y < M; y++) {
     a[x][y] = Math.floor(Math.random() * 100+1);
-    C[y] = 0;
   }
-  R[x] = a[x].reduce((acc,num) => acc + num);
-}
-
-for (let i = 0; i < N; i++) {
-  a[i].forEach(function(num,ind){
-    C[ind] += num;
-  });
+  if (M !== 0) R[x] = a[x].reduce((acc,num) => acc + num);
+  a[x].forEach((num,ind) => C[ind] = (x === 0) ? num : C[ind] + num);
 }
 
 console.log(`Input: N = ${N}, M = ${M}
