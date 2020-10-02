@@ -10,3 +10,14 @@
     
   http://www.imparareaprogrammare.it
 */
+
+
+function digitK(n, k) {
+	let s = Array.from(n);
+	return ((k > 0)&&(k <= s.length)) ? s[k-1] : 0;
+}
+
+const N = prompt('Inserisci N');
+const K = parseInt(prompt('Inserisci K'));
+
+console.log(`Input : N = ${N}, K = ${K}\nOutput: ${digitK(N, K)}`);
