@@ -20,3 +20,25 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false;
+    return num > 1;
+}
+
+const printPrimes = num => {
+  let arr = [];
+  let i = 2;
+  while (arr.length<num) {
+    if (isPrime(i)) arr.push(i);
+    i++;
+  }
+
+  return `\t\t\t\t${arr.join('\n\t\t\t\t')}`
+}
+
+const N = prompt('Inserisci un numero');
+
+console.log(`Input: n = ${N}
+Output: \n\t\t\t${(isPrime(N)) ? 'PRIME' : 'NOT PRIME'}\n\n${printPrimes(N)}`);
