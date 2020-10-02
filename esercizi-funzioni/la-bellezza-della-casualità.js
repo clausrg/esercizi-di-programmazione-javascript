@@ -8,3 +8,12 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+function randNum(n) {
+	return Math.floor(Math.random() *(Math.abs(n)+1))
+}
+
+let num = prompt('inserisci un numero');
+
+console.log(randNum(num));
