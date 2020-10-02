@@ -12,3 +12,19 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function factorial(n) {
+	let f;
+	let i = Math.abs(n);
+	do {
+		f = (f === undefined) ? n : f * i;
+		i--;
+	} while (i > 0)
+
+	return f
+}
+
+num = prompt('Inserisci un numero');
+
+console.log(`Input: n = ${num}
+    Output: ${factorial(num)}`);
