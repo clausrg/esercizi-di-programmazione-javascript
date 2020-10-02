@@ -15,3 +15,24 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function game(a, b, n) {
+  if ((Math.abs(a-n)-Math.abs(b-n))===0) {
+    return 0
+  }  else if ((Math.abs(a-n)-Math.abs(b-n))<0) {
+    return -1
+  } else if ((Math.abs(a-n)-Math.abs(b-n))>0) {
+    return 1
+  }
+
+}
+
+const A = Math.floor(Math.random() * 100 +1);
+const B = Math.floor(Math.random() * 100 +1);
+const N = Math.floor(Math.random() * 100 +1);
+
+console.log(`Player A = ${A}
+  Player B = ${B}
+  Estrazione = ${N}
+  Risultato = ${game(A, B, N)}`);
+
