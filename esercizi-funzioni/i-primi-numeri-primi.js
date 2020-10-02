@@ -22,9 +22,9 @@
 */
 
 const isPrime = num => {
-    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
-        if(num % i === 0) return false;
-    return num > 1;
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+    if (num % i === 0) return false;
+  return num > 1;
 }
 
 const printPrimes = num => {
@@ -35,7 +35,7 @@ const printPrimes = num => {
     i++;
   }
 
-  return `\t\t\t\t${arr.join('\n\t\t\t\t')}`
+  return `\t\t\t\t${arr.join('\n\t\t\t\t')}`;
 }
 
 const N = prompt('Inserisci un numero');
