@@ -14,3 +14,18 @@
             
   http://www.imparareaprogrammare.it
 */
+
+function timer(n) {
+  let a = `Input: n = ${n}\nOutput:\n`;
+
+  do {
+    a += `\t\t\t\t${n-1}\n`;
+    n--;
+  } while (n > 0)
+
+  console.log(a);
+}
+
+num = prompt('Inserisci un numero positivo');
+
+timer(num);
