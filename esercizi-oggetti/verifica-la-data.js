@@ -14,21 +14,24 @@
   http://www.imparareaprogrammare.it
 */
 
-function checkDate(d,m,y) {
+function checkDate(day,month,year) {
+  const date = {day,month,year};
   const mDays = [31,29,31,30,31,30,31,31,30,31,30,31];
-  const numDays = mDays[m-1];
-  if ((m>0)&&(m<=12)&&(d>0)&&(d<=numDays)&&(y>0)) {
-    var date = `${d}/${m}/${y}`;
+  const numDays = mDays[date.month-1];
+  if ((date.month>0)&&(date.month<=12)&&(date.day>0)&&(date.day<=numDays)&&(date.year>0)) {
+    return `${date.day}/${date.month}/${date.year}`
   } else {
-    var date = 'La data non è valida!';
+    return 'La data non è valida!'
   }
-  const printDate = `Input:\n\tday: ${d}\n\tmonth: ${m}\n\tyear: ${y}\nOutput: \n\t${date}`;
-
-  return printDate
 }
 
 const d = prompt('Inserisci un giorno');
 const m = prompt('Inserisci un mese');
 const y = prompt('Inserisci un anno');
 
-console.log(checkDate(d,m,y));
+console.log(`Input:
+\tday: ${d}
+\tmonth: ${m}
+\tyear: ${y}
+Output:
+\t${checkDate(d,m,y)}`);
