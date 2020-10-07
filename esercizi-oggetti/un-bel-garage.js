@@ -9,3 +9,26 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+let cars = [
+	{make: 'volvo', model: 'v40'},
+	{make: 'fiat', model: 'punto'},
+	{make: 'volvo', model: '840'},
+	{make: 'volkswagen', model: 'polo'},
+	{make: 'volkswagen', model: 'maggiolino'},
+	{make: 'volvo', model: 'xc40'},
+	{make: 'dacia', model: 'duster'},
+];
+
+function printCar(make) {
+	let models = [];
+	cars.forEach(function(item){
+		if (item.make===make) models.push(item.model);
+	}); 
+	return models.join('\n')
+}
+
+const make = prompt('Inserisci una marca di automobili');
+
+console.log(printCar(make));
